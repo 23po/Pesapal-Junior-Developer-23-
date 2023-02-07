@@ -151,3 +151,5 @@ function assembler (instruction) {
     
     
     }
+
+export default assembler;
