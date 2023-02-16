@@ -4,6 +4,8 @@ GEM
     kramdown (2.4.0)
       rexml
     liquid (5.4.0)
+    rack (3.0.4.1)
+    redcarpet (3.6.0)
     rexml (3.2.5)
 
 PLATFORMS
@@ -12,6 +14,8 @@ PLATFORMS
 DEPENDENCIES
   kramdown
   liquid
+  rack
+  redcarpet
 
 BUNDLED WITH
    2.1.2
