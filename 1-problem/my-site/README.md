@@ -1,10 +1,10 @@
 # My Static Site Generator
 
-For this project, I used Ruby to build a simple program that generates a static website from html pages
+For this project, I used Ruby to build a simple program that generates a static website from html pages.
 
-The generator can be called by running ruby script.rb
+The generator can be called by running ruby script.rb on the terminal
 
-script.rb contains the key functions:
+script.rb contains the key methods/functions:
 
 ## Functions
 
@@ -19,9 +19,7 @@ Parses a markdown file for metadata.
 
 Metadata in this context is data at the top of a markdown file which provides additional information about the content in the markdown.
 
----
-title: My Blog
----
+This could be the title of the page and is delinated by "---" at the befinning, and "---" at the end.
 
 ### parse_content
 
@@ -53,4 +51,4 @@ sub/gsub are similar to string replace/replaceAll in javascript. For more on how
 
 - the function inclues a handler for files from the static directory
 
-**Note**: the code runs on port 8000
+**Note**: the code can be tested  on localhost port 8000
