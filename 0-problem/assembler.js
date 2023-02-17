@@ -3,6 +3,8 @@
 
 const instructionSet = {
 
+
+    
 "halt": 0x00, // -- Terminate program
 
 "nop" : 0x01,  //-- Do nothing
@@ -55,7 +57,7 @@ const instructionSet = {
 
 function assembler (instruction) {
 
-    let components = instruction.split(" ");
+    //let components = instruction.split(" ");
     
     //mnemonic, operands
     let [mnemonic] = instruction.split(' ')[0]
