@@ -1,3 +1,5 @@
+/depfu/dependencies/:vcsType/:project+
+
 # My Static Site Generator
 
 For this project, I used Ruby to build a simple program that generates a static website from markdown, while applying static content.
