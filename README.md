@@ -1,10 +1,12 @@
 # The Pesapal Developer Challenge
 
 
-We are looking for the most talented, young developers in the region. If you are a skilled programmer with a love for computing, Pesapal might be the place for you.
+I took part in an application process to join Pesapal, as a junior developer.
 
 
-Thriving at Pesapal requires the ability to work under pressure, the will and the dedication and the capacity to grow constantly, the ingenuity to develop unorthodox solutions—in a word, you must be able to think for yourself.
+I sought to show that I could thrive  at the organization. Thriving there requires the ability to work under pressure, the will and the dedication and the capacity to grow constantly, the ingenuity to develop unorthodox solutions—in a word, you must be able to think for yourself. 
+
+I loved the requirements set out under the ideal candidate, and had to apply:
 
 
 ## The Ideal Candidate.

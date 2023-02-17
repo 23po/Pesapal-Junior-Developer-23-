@@ -26,6 +26,10 @@ I tried to implement LCM, which was the clearest to me.
 
 5. the diffArray is joined and returned as a single string.
 
+## myPatch
+
+1. 
+
 
 ## myLCS
 
