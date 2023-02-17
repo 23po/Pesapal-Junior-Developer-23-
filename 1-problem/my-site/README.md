@@ -1,10 +1,12 @@
 # My Static Site Generator
 
-For this project, I used Ruby to build a simple program that generates a static website from html pages.
+For this project, I used Ruby to build a simple program that generates a static website from markdown, while applying static content.
 
-The generator can be called by running ruby script.rb on the terminal
+- Inputs --> this directory contains the markdown
+- Static --> this contains static files like css
+- Output --> this is the build directory 
 
-script.rb contains the key methods/functions:
+The generator can be called by running ruby script.rb on the terminal. script.rb contains the key methods/functions:
 
 ## Functions
 
@@ -17,15 +19,15 @@ script.rb contains the key methods/functions:
 
 Parses a markdown file for metadata. 
 
-Metadata in this context is data at the top of a markdown file which provides additional information about the content in the markdown.
+Metadata in this context is data at the top of a .md file which provides additional information about the content, e.g title.
 
-This could be the title of the page and is delinated by "---" at the befinning, and "---" at the end.
+Metadata is delineated by "---" at the befinning, and "---" at the end.
 
 ### parse_content
 
 This function parses the content in the markdown. It would not be possible without the Redcarpet library. 
 
-https://github.com/vmg/redcarpet
+--> https://github.com/vmg/redcarpet
 
 ### generate_pages
 
@@ -41,13 +43,13 @@ https://github.com/vmg/redcarpet
 
 - Finally, it writes the output into the output_filename
 
-sub/gsub are similar to string replace/replaceAll in javascript. For more on how the ruby sub & gsub methods work, it is well explained here: https://medium.com/@khalidh64/sub-gsub-in-ruby-e4c611d33890
+sub/gsub are similar to string replace/replaceAll in javascript. For more on how the ruby sub & gsub methods work, it is well explained here --> https://medium.com/@khalidh64/sub-gsub-in-ruby-e4c611d33890
 
 ### start_server
 
 - this function starts a new instance of a ruby webrick server. 
 
-- WEBrick is an HTTP server toolkit that can be configured as an HTTPS server, a proxy server, and a virtual-host server. You can find more about here: https://github.com/ruby/webrick
+- WEBrick is an HTTP server toolkit that can be configured as an HTTPS server, a proxy server, and a virtual-host server. You can find more about --> https://github.com/ruby/webrick
 
 - the function inclues a handler for files from the static directory
 
