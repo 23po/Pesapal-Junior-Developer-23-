@@ -8,27 +8,53 @@ When your diff application is run on two files, it should be possible to use eit
 
 # Solution
 
-From my research, several algorithms can be used to do a diff between sequences of characters.
+From my research, 3 kinds of algorithms can be used to do a comparison of character sequences between mutliples files.
 
-I tried to implement LCM, which was the clearest to me. 
+- Patience Stack
+- Hunt-McIlroy algorithm:
+- Longest Common Subsequence
+- Myers' diff algorithm (variation of LCM)
+- Hunt-McIlroy algorithm (variation of LCM)
 
-## myDiff --> using Longest Common Substring (LCS) Method
+I tried to implement LCM, which was the clearest to me and is applied in the git versioning system, for example. 
 
-1. myDiff breaks takes two input files and breaks each into an array of lines
+## myDiff --> using Longest Common Subsequence (LCS) Method
+
+1. myDiff breaks takes two input files and breaks each into an array of lines (linesA, linesB)
 
 2. Each line in the lcs will be compared to each corresponding line in the two arrays
 
-3. - Each differing line between linesA and LCS is pushed to a difArray with a "-" prefix.
-   - Each differing line in linesB and its correspondent in LCA is pushed to the same   difArray from above, but with a "+" prefix.
-   - similar lines are also pushed to diffArray but prefixed with an empty space.
+3. - Each differing line between linesA and LCS is pushed to a difArray with a "- " prefix.
+   - Each differing line in linesB and is pushed to the same diffArray, but with a "+ " prefix.
+   - similar lines are also pushed to diffArray but prefixed with an empty space.("  ")
 
-4. Remaining lines that can't be compared to LCS since the arrays are longer than LCS are also pushed to the diffArray with either "-" or "+" prefixes.   
+4. linesA and linesB are longer or equal to the LCS. So in cases, there will be extra lines not compared with the LCS. These lines are also pushed to the diffArray with either "- " or "+ " prefixes.   
 
-5. the diffArray is joined and returned as a single string.
+5. the diffArray is joined and returned as a single string. This output represents the diference between the 2 files.
 
 ## myPatch
 
-1. 
+1. myPatch takes in two filepaths, which are read as utf-8 format strings and stored in 2 variables.
+   - one drawback is the current implementation is synchronous
+
+2. these strings are passed to the myDiff function and the result is converted to an array of lines. This is called diffLines. 
+
+3. A changes array is initialized. 
+
+4. the function iterates through diffLines and pushes data to the changes array. 
+
+   - if the line stats with "- ", it is considered a deletion and an object containing the  type "delete" and the line to be deleted is added to the changes array.
+   - If a line starts with "+ " , it is considered an insertion and an object containing the type insert and the line to be inserted is added to the changes array.
+
+5. an array contentsB that contains all the lines of the file A is initialized.
+
+6. we loop through all the objects in the changs array -:
+
+   -  If the change is of type delete, it removes the line at the given index from the contentsB array using the splice method.
+   - If the change is of type insert, it inserts the new line (change.line) at the given index (change.index - 1) in the contentsB array using the splice method.
+
+7. Resulting contents are written to file b
+
 
 
 ## myLCS
