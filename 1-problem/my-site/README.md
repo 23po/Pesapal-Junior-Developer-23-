@@ -60,4 +60,4 @@ sub/gsub are similar to string replace/replaceAll in javascript. For more on how
 
 - You therefore need to install the webrick gem (gem install webrick, simply refer to the docs in case of any difficulty.
 
-**Note**: the code can be tested  on localhost port 8000
+**Note**: the code can be tested  on localhost port 8000 and the server will timeout after 180 seconds
